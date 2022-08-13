@@ -1,8 +1,11 @@
+const dotenv = require("dotenv");
+dotenv.config({path: './config.env'});
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 require('./db/conn');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
